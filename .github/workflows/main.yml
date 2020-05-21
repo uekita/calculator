@@ -1,4 +1,4 @@
-name: integration-tests
+name: visual-tests
 on: [push]
 jobs:
   cypress-run:
@@ -19,3 +19,6 @@ jobs:
           browser: chrome
           wait-on: 'http://localhost:3000'
           wait-on-timeout: 90
+        env:
+          HAPPO_API_KEY: ${{ secrets.HAPPO_API_KEY }}
+          HAPPO_API_SECRET: ${{ secrets.HAPPO_API_SECRET }}
