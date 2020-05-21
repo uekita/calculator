@@ -3,5 +3,6 @@ describe('Home page', function() {
         cy.visit('/');
         cy.get('body').happoScreenshot();
         cy.contains('AC').happoScreenshot();
+        cy.contains('X').happoScreenshot();
     });
 });
